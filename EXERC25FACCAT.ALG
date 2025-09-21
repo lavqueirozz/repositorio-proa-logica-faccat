@@ -11,27 +11,28 @@ Algoritmo "EXERC25FACCAT"
 // Data atual  : 10/09/2025
 Var
    // Seção de Declarações das variáveis
-    mumero_conta: inteiro
-    saldo, debito, credito: real
+   numero_conta: inteiro
+   saldo, divida, credito,saldo_atual: real
 Inicio
    // Seção de Comandos, procedimento, funções, operadores, etc...
 
-   // jornada_trabalho <- 40
-   // acréscimo<- 0.50
+   Escreval("Extrato bancário")
 
-   Escreval("Salario Final")
-
-   Escreva("Digite o numero da sua conta: ")
+   Escreva("Digite o numero da sua conta de 6 digitos: ")
    leia(numero_conta)
-   Escreva("Digite o seu débito :")
-   leia( valor_vendas)
+   escreva("Digite seu saldo atual: ")
+   leia(saldo)
+   Escreva("Digite quanto voce deve: ")
+   leia(divida)
+   Escreva("Digite quanto voce tem de crédito: ")
+   leia(credito)
 
-   se valor_vendas < 1501.00 então
-      salario_final <- salario_fixo + (valor_vendas * 0.03)
-      escreval("Seu salario final é:", salario_final)
+   saldo_atual<- saldo - divida + credito
+
+   se saldo_atual <0 entao
+      escreval("O saldo da conta ", numero_conta, "é negativo: ", saldo_atual)
    senao
-      salario_final <- salario_fixo + (valor_vendas * 0.05)
-      escreval("Seu salario final é: ", salario_final)
+      escreval("O saldo da conta ", numero_conta, " é positivo: ", saldo_atual)
    fimse
 
 Fimalgoritmo
